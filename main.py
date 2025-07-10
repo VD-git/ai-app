@@ -17,10 +17,10 @@ chat_response = client.chat.complete(
     ]
 )
 
-print(chat_response.choices[0].message.content)
+print(chat_response.choices[0].message.content + "\n\n")
 
 # Temperature example
-prompt = "Tell us a joke"
+prompt = "Tell us a joke (short one)"
 chat_response = client.chat.complete(
     model = model,
     messages = [
@@ -32,7 +32,7 @@ chat_response = client.chat.complete(
     temperature = 1.5
 )
 
-print("Temperature 1.5: " + chat_response.choices[0].message.content)
+print("Temperature 1.5: " + chat_response.choices[0].message.content + "\n\n")
 
 chat_response = client.chat.complete(
     model = model,
@@ -45,7 +45,7 @@ chat_response = client.chat.complete(
     temperature = 0.0
 )
 
-print("Temperature 0: " + chat_response.choices[0].message.content)
+print("Temperature 0: " + chat_response.choices[0].message.content + "\n\n")
 
 # Example-Shot Learning
 prompt = """
@@ -68,4 +68,4 @@ chat_response = client.chat.complete(
     ]
 )
 
-print("Classifications:/n/n " + chat_response.choices[0].message.content)
+print("Classifications:\n\n" + chat_response.choices[0].message.content)
