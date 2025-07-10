@@ -26,7 +26,7 @@ chat_response = client.chat.complete(
     messages = [
         {
             "role": "user",
-            "content": prompt",
+            "content": prompt,
         },
     ],
     temperature = 1.5
@@ -39,7 +39,7 @@ chat_response = client.chat.complete(
     messages = [
         {
             "role": "user",
-            "content": prompt",
+            "content": prompt,
         },
     ],
     temperature = 0.0
@@ -49,7 +49,7 @@ print("Temperature 0: " + chat_response.choices[0].message.content)
 
 # Example-Shot Learning
 prompt = """
-Classify sentiment as 1-5 (negative to positive):
+Classify sentiment as 1-5 (negative to positive) in the following statements:
 1. Comfortable, but not very pretty = 2
 2. Love these! = 5
 3. Unbelievably good! = 
@@ -63,7 +63,7 @@ chat_response = client.chat.complete(
     messages = [
         {
             "role": "user",
-            "content": prompt",
+            "content": prompt,
         },
     ]
 )
