@@ -4,6 +4,7 @@ from mistralai import Mistral
 class ChatbotMistral:
     def __init__(self):
         self.api_key = os.environ["MISTRAL_API_KEY"]
+        self.client = Mistral(api_key=self.api_key)
         self.model = "mistral-small-latest"
         self.system_message = [{"role": "system", "content": "Você é um solucionador de dúvidas que só responde em português"}]
         self.assistant_examples = [
