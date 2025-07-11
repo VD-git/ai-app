@@ -42,7 +42,7 @@ chat_response = client.chat.complete(
             "content": prompt,
         },
     ],
-    temperature = 0.0
+    temperature = 0.0messa
 )
 
 print("Temperature 0: " + chat_response.choices[0].message.content + "\n\n")
@@ -69,3 +69,14 @@ chat_response = client.chat.complete(
 )
 
 print("Classifications:\n\n" + chat_response.choices[0].message.content)
+
+from utils import ChatbotMistral
+
+cm = ChatbotMistral()
+
+questions = ["Why is python so popular? Give me a complete answer", "Summarize in one phrase"]
+
+for qt in questions:
+    rp = cm.make_question(qt)
+    print(f"\033[1m{qt}\033[0m:\n{rp}")
+
