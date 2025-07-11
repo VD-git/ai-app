@@ -18,7 +18,7 @@ class ChatbotMistral:
     def make_question(self, question:str):
         if len(self.history_messages) > 0:
             messages = self.system_message + self.assistant_examples + self.history_messages + [{"role": "user", "content": question}]
-            response = client.chat.complete(model = self.model, messages = messages).choices[0].message.content
+            response = self.client.chat.complete(model = self.model, messages = messages).choices[0].message.content
             self.history_messages += [{"role": "user", "content": question}, {"role": "assistant", "content": response}]
             return response
         else:
