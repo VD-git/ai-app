@@ -42,7 +42,7 @@ chat_response = client.chat.complete(
             "content": prompt,
         },
     ],
-    temperature = 0.0messa
+    temperature = 0.0
 )
 
 print("Temperature 0: " + chat_response.choices[0].message.content + "\n\n")
